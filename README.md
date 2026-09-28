@@ -49,6 +49,7 @@ not supplied here.
 
 ## Validation status
 
-The extracted binding suite passed on macOS ARM64 with UBSan using an existing
-pinned libsodium 1.0.22 build. The Linux build branch and Apple cross-build
-branches are supplied but have not yet been rerun for this repository.
+The extracted binding suite passed on macOS ARM64 and Linux x86_64 with UBSan,
+using existing pinned libsodium 1.0.22 builds. Linux validated package commit
+`8fccbfd` with compiler `6c2aa654`. The new Linux dependency-build script branch
+and Apple cross-build branches have not yet been rerun for this repository.
