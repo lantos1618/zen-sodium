@@ -25,7 +25,7 @@ initialize* = () bool { Sodium.sodium_init() >= 0 }
 // These delegate secure erasure/comparison to libsodium, never ordinary memcpy
 // or a language loop. Equal-length comparison is constant-time in libsodium;
 // this is not a whole-program side-channel guarantee.
-wipe* = (bytes: Ptr<u8>, count: usize) () {
+wipe* = (bytes: Ptr<u8>, count: usize) {
     (count > 0).then(() { Sodium.sodium_memzero(bytes.to<()>(), count); });
 }
 equal* = (left: Ptr<u8>, right: Ptr<u8>, count: usize) bool {
